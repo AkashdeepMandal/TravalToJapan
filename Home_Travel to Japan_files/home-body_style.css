@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*Header Container */
+.container {
+    position: relative;
+  }
+  .container > div.bg-color{
+    background-color: rgb(58, 67, 146);
+    height: auto;
+  }
+  .container img {
+    vertical-align: middle;
+    opacity: .8;
+  }
+  .content {
+    position: absolute;
+    bottom: 0;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px 20px;
+    text-shadow: 2px 2px black;
+  }
+  .content h6{
+    font-size: 10px;
+  }
+  .content p{
+    font-size: 8px;
+  }
+
+/* body */
+
+.banner p{
+  text-align: center;
+  font-size: 15px;
+  line-break: loose;
+  opacity: 0.6;
+  padding: 20px 10%;
+}
+
+/* details with picture*/
+.details {   
+  width: 100%;
+}
+.card{
+background: white;
+margin-bottom: 20px;
+overflow: auto;
+}
+.details .card img{
+width: 100%;
+}
+.card-content{
+  padding: 0 15px;
+  margin: 10px 0px;
+}
+.details .card h3{
+font-size: 15px;
+opacity: .7;
+width: 100%;
+}
+.details .card p{
+font-size: 14px;
+opacity: .7;
+width: 100%;
+}
+.card-content a{
+  position: relative;
+  display: inline-block;
+  height: 30px;
+}
+.card-content a button{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+
+/* Button Design */
+.button {
+  border-radius: 4px;
+  background-color: #FC1414;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px 0px;
+  font-family: Montserrat;
+  font-weight: bold;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*pictures*/
+.photos{
+  background-color: #252525;
+  margin: 10px 0px;
+  width: auto;
+  height: auto;
+}
+.photos h2{
+  font-family: poppins, sans-serif;
+  text-align: center;
+padding: 20px;
+color: white;
+
+}
+.pvr-img{
+  display:  flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.pvr-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: opacity .5s;
+}
+.pvr-img div{
+  position: relative;
+  width: 45%;
+  height: 100px;
+  margin-bottom: 15px;
+}
+.pvr-img label{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: poppins, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  cursor:pointer;
+}
+.pvr-img img:hover{
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+/* The Modal (Image-Zoom) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 80px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  overflow: hidden;
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 768px;
+}
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+/* Add Animation */
+.modal-content, #caption {    
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(10)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+/* The Close Button */
+.imgclose {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.imgclose:hover,.imgclose:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+  /*Responsive for tab */
+  @media screen and (min-width : 640px){
+    .content{padding : 16px 40px;}
+    .content h6{font-size: 12px;}
+    .content p{font-size: 10px;}
+    .banner p{font-size: 18px;}
+    .card-content{
+      padding: 0 20px;
+      margin: 10px 0px;
+    }
+    .pvr-img div{
+      width: 30%;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+   
+  }
+/*Responsive for laptop and larger device */
+  @media screen and (min-width : 961px){
+    .content{padding : 50px 100px;}
+    .content h6{font-size: 14px;}
+    .content p{font-size: 12px;}
+    .banner p{
+      font-size: 25px;
+      padding: 50px 10%;
+    }
+    .card{margin: 0;}
+    .center{ 
+      padding:40px;
+      height: 400px;
+      background-color: rgb(226, 224, 224);
+    }
+    .card-content{margin: 0;}
+    .details .card img {
+      height: 400px;
+      object-fit: cover;
+    }
+    .details .card:nth-child(odd) img{
+      float: left;
+      width: 50%;
+    }
+    .details .card:nth-child(odd) .center{
+      float: right;
+      width: 50%;
+    }
+    .details .card:nth-child(even) img{
+      float: right;
+      width: 50%;
+    }
+    .details .card:nth-child(even) .center{
+      float: left;
+      width: 50%;
+    }
+    .card-content h3,.card-content p{
+      width: 60%;
+    }
+    .card .center{
+      display: grid;
+      align-items: center;
+      padding: 0;
+    }
+    .photos{margin: 0;}
+    .photos h2{
+      font-size: 40px;
+      padding: 40px;
+    }
+    .pvr-img div{
+      width: 22%;
+      height: 200px;
+      margin-bottom: 30px;
+    }
+    .pvr-img label{
+      font-size: 25px;
+    }
+  }

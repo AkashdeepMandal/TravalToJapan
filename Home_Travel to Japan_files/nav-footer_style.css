@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+a {
+    color: white;
+    font-size: 10px;
+    width: auto;
+    cursor: pointer;
+}
+body {font-family: Poppins, sans-serif;}
+
+/* --NAVIGATION BAR-- */
+
+nav {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.logo {
+    display: block;
+    position: relative;
+    font-weight: bold;
+    width: 100%;
+    background: rgba(253, 75, 75, 0.973);
+    height: 40px;
+    margin-left: 0px;
+}
+.logo a {
+    position: absolute;
+    color: white;
+    font-family: Georgia, san-serif;
+    left: 20px;
+    display: inline-block;
+    font-size: 16px;
+    top: 12px;
+}
+
+/* burger btn*/
+
+.logo div {
+    right: 20px;
+    display: inline-block;
+    position: absolute;
+    height: auto;
+    width: 20px;
+    top: 12px;
+}
+.material-icons-round {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: white;
+}
+button {
+    background-color: rgba(240, 248, 255, 0);
+    border-style: none;
+    position: absolute;
+}
+.material-icons-round.hidden {display: none;}
+.material-icons-round.visible {display: block;}
+
+/* sub-menu */
+
+ul.menu-list {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-evenly;
+    background-color: rgba(65, 65, 65, 0.979);
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 100%;
+    text-transform: uppercase;
+}
+.menu-list>li,.menu-list>ul {
+    position: relative;
+    margin: 5px 20px;
+}
+.sub-menu {
+    width: auto;
+    display: none;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: white;
+}
+.submenu-active > .sub-menu{display: flex;}
+.sub-menu >li{margin: 5px 10px;}
+.sub-menu a {
+    color: rgb(54, 54, 54);
+    font-size: 8px;
+    font-weight: normal;
+
+}
+ul.menu-list.visible{display: flex;}
+.item:hover .sub-menu{
+    display: flex;
+}
+
+/*footer*/
+.footer{
+	width: 100%;
+	display: block;
+	position: absolute;
+    text-align: center;
+    background-color: #1E1E1E;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 20px 0px;
+}
+.footer div a i{
+	margin: 10px 10px 10px;
+	color: white;
+}
+.footer h6{
+	padding-bottom: 10px;
+	font-size: 12px;
+}
+
+/* Respansive layout for tab*/
+@media screen and (min-width : 640px) {
+    .logo {height: 60px;}
+    .logo a{
+        left: 40px;
+        font-size: 20px;
+        top: 20px;
+    }
+    .logo div {
+        right: 40px;
+        width: 20px;
+        top: 16px;
+    }
+    .material-icons-round {
+        font-size: 26px !important;
+        font-weight: bold !important;
+        color: white;
+    }
+    .menu-list li a{font-size: 12px;}
+    .sub-menu li a{font-size: 11px;}
+}
+
+/* Responsive for laptop and larger device */
+@media screen and (min-width: 961px) {
+    a{font-size: 20px;}
+    li{margin: none;}
+    .logo{
+        display: inline-block;
+        position:absolute ;
+        background: none;
+    }
+    .logo a{
+        font-size: 26px;
+        left: 100px;
+    }
+    .logo div{display: none;}
+    ul.menu-list,ul.menu-list.visible{
+        display:inline-block;
+        position: absolute;
+        background-color: transparent;
+        height: 60px;
+        width: auto;
+        right: 50px;
+    }
+    .menu-list li{
+        display: inline-block;
+        top: 24px;
+        position: relative;
+    }
+    .menu-list li a{font-size: 15px;}
+    .sub-menu li a{font-size: 11px;}
+    .sub-menu{
+        position: absolute;
+        width: 140px;
+    }
+    .sub-menu li{top:0%;}
+    .menu-list li:hover > a{color: #cac7c7;}
+}
