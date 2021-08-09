@@ -93,12 +93,12 @@ ul.menu-list {
 .sub-menu >li{margin: 5px 10px;}
 .sub-menu a {
     color: rgb(54, 54, 54);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: normal;
 
 }
 ul.menu-list.visible{display: flex;}
-.item:hover .sub-menu{
+/*.item:hover .sub-menu{
     display: flex;
 }
 

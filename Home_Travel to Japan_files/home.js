@@ -5,23 +5,24 @@ let items = document.querySelectorAll(".item");
 let modal = document.getElementById('myModal');
 let modalImg = document.getElementById("img01");
 let captionText = document.getElementById("caption");
+let imgCard = document.querySelectorAll(".myImg");
 
 
 /* Menu-bar function */
-openButton.onclick = function() {
+openButton.addEventListener("click", function() {
     openButton.classList.replace("visible", "hidden");
     closeButton.classList.replace("hidden", "visible");
     if(menu.classList.contains("visible") == false){
       menu.classList.add("visible");
     }
-}
-closeButton.onclick = function() {
+});
+closeButton.addEventListener("click", function() {
     closeButton.classList.replace("visible", "hidden");
     openButton.classList.replace("hidden", "visible");
     if(menu.classList.contains("visible")){
       menu.classList.remove("visible");
     }
-}
+});
 
 /* Activate Submenu */
 function toggleItem() {
@@ -47,13 +48,24 @@ for (let item of items) {
 
 /*image zoom*/
 
-function imgZoom(imgSrc,imgAlt){
+function imgZoom(){
   modal.style.display = "block";
-  modalImg.src = imgSrc;
-  captionText.innerHTML = imgAlt;
+  modalImg.src = this.childNodes[0].src;
+  captionText.innerHTML = this.childNodes[0].alt;
 }
+
+for( let img of imgCard){
+  img.parentNode.addEventListener("click",imgZoom);
+}
+
 
 // When the user clicks on <span> (x), close the modal
 function imgClose() { 
   modal.style.display = "none";
 }
+
+document.getElementsByClassName("imgclose")[0].addEventListener("click",imgClose)
+
+//Copyright year change
+let d = new Date()
+document.getElementsByClassName("copyright")[0].innerHTML = "<i class=\"fa fa-copyright\"></i > Copyright " +d.getFullYear() +" Travel to Japan"

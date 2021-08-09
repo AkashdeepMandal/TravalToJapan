@@ -27,10 +27,10 @@
     text-shadow: 2px 2px black;
   }
   .content h6{
-    font-size: 10px;
+    font-size: 12px;
   }
   .content p{
-    font-size: 8px;
+    font-size: 10px;
   }
 
 /* body */
@@ -163,7 +163,7 @@ color: white;
   color: white;
   cursor:pointer;
 }
-.pvr-img img:hover{
+.pvr-img div:hover img{
   cursor: pointer;
   opacity: 0.4;
 }
